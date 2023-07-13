@@ -26,7 +26,7 @@ export default class CalloutInLwc extends LightningElement {
             body: this.body
         }).then((response) => response.json())
             .then(repos => {
-                console.log('Chage ' + JSON.stringify(repos));
+                console.log('Change ' + JSON.stringify(repos));
             });
     }
 }
