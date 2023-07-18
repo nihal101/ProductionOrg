@@ -1,12 +1,12 @@
 @RestResource(urlMapping='/account/*')
 global With Sharing class AccountController {
     
-    @HttpGet
+/*@HttpGet
     global static void getAccount() {
         Account acc = new Account(Id = '0012w00001XVxm3AAD');
         acc.Name = 'JIRA';
         update acc;
-        System.debug('Test 123');
+        System.debug('Test');
     }
     
     @HttpPost
@@ -15,6 +15,10 @@ global With Sharing class AccountController {
         acc.Name = 'Postman 123';
         insert acc;
         return acc.Name;
+    }*/
+
+    public static void getData() {
+        System.debug('Test Ignore');
     }
     
     /*@HttpPost
@@ -62,7 +66,7 @@ global With Sharing class AccountController {
         //return true;
     //}*/
     
-    public static void createComment(Map<String, Object> comment, Map<String, Object> issue) {
+    /*public static void createComment(Map<String, Object> comment, Map<String, Object> issue) {
         List<Case> casedetails = [SELECT Id, JIRA_Key__c FROM CASE WHERE JIRA_Key__c =: issue.get('key').toString()];
         if(casedetails.size() > 0) {
             Case_Comment__c cm = new Case_Comment__c();
@@ -118,5 +122,5 @@ global With Sharing class AccountController {
         if(casedetails.size() > 0) { 
             delete casedetails[0];
         }
-    }
+    }*/
 }
