@@ -6,7 +6,7 @@ global With Sharing class AccountController {
         Account acc = new Account(Id = '0012w00001XVxm3AAD');
         acc.Name = 'JIRA';
         update acc;
-        System.debug('Test 123451234');
+        System.debug('Test 123451234 new changes 123');
     }
     
     @HttpPost
